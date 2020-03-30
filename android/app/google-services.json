@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "11885001771",
+    "firebase_url": "https://territorios-a4300.firebaseio.com",
+    "project_id": "territorios-a4300",
+    "storage_bucket": "territorios-a4300.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:11885001771:android:a710fb9099c18396ad3e6e",
+        "android_client_info": {
+          "package_name": "com.alcideswenner.territorios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "11885001771-sgtpp7lpq6dpnsrg2j24omdu61bh8aqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOM_0BFNRHtslII7ydazRqX30qDNcJ9C8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "11885001771-sgtpp7lpq6dpnsrg2j24omdu61bh8aqf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
