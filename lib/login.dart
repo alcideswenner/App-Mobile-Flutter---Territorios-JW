@@ -208,7 +208,7 @@ class _LoginState extends State<Login> {
                               duration: Toast.LENGTH_LONG,
                               gravity: Toast.BOTTOM);
                           pr.show();
-                          Future.delayed(Duration(seconds: 1)).then((value) {
+                          Future.delayed(Duration(seconds: 3)).then((value) {
                             pr.hide().whenComplete(() {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (BuildContext context) => Home()));
