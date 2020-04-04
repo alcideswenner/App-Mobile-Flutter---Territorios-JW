@@ -188,11 +188,13 @@ class Mapas extends StatelessWidget {
       padding: EdgeInsets.all(10),
       itemCount: data.length,
       itemBuilder: (BuildContext build, int index) {
+
         Item item = data[index];
         return Card(
           elevation: 3,
           child: Row(
             children: <Widget>[
+              
               Container(
                 height: 150,
                 width: 110,
