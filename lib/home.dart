@@ -106,7 +106,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           BottomNavigationBarItem(
               icon: Icon(Icons.home), title: Text("Ínicio")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home), title: Text("Histórico")),
+              icon: Icon(Icons.history), title: Text("Histórico")),
         ],
       ),
     );
