@@ -33,6 +33,7 @@ dependencies:
   flutter_launcher_icons: "^0.7.3"
   shared_preferences: ^0.5.6+3
   progress_dialog: ^1.2.0
+  wc_flutter_share: ^0.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

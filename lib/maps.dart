@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:wc_flutter_share/wc_flutter_share.dart';
 
 class Maps extends StatefulWidget {
   @override
@@ -34,6 +36,48 @@ class Item {
 }
 
 class Mapas extends StatelessWidget {
+  _image(BuildContext context, String image,String titulo, String bairro) {
+    showDialog(
+        context: context,
+        builder: (_) => Dialog(
+              elevation: 0,
+              backgroundColor: Colors.transparent,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                        width: double.infinity,
+                        child: Image(
+                          image: AssetImage(image),
+                          fit: BoxFit.contain,
+                        )),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      IconButton(
+                        color: Colors.white,
+                        icon: Icon(Icons.close),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      const SizedBox(width: 10.0),
+                      IconButton(
+                        color: Colors.white,
+                        icon: Icon(Icons.share),
+                        onPressed: () {
+                           _shareImageAndText(image,titulo,bairro);
+                           print("aqui"+image);
+                        },
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ));
+  }
+
   final List<Item> data = [
     Item(
         titulo: "Território 01",
@@ -180,29 +224,33 @@ class Mapas extends StatelessWidget {
         bairro: "Anil",
         image: "mapas/map29.png",
         legenda: "Centro")
-        
   ];
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       padding: EdgeInsets.all(10),
       itemCount: data.length,
       itemBuilder: (BuildContext build, int index) {
-
         Item item = data[index];
         return Card(
           elevation: 3,
           child: Row(
             children: <Widget>[
-              
-              Container(
-                height: 150,
-                width: 110,
-                padding:
-                    EdgeInsets.only(left: 0, top: 10, bottom: 70, right: 20),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(item.image), fit: BoxFit.contain)),
+              GestureDetector(
+                onTap: () {
+
+                  _image(context, item.image,item.titulo,item.bairro);
+                },
+                child: Container(
+                  height: 150,
+                  width: 110,
+                  padding:
+                      EdgeInsets.only(left: 0, top: 10, bottom: 70, right: 20),
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(item.image), fit: BoxFit.contain)),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(28.0),
@@ -228,7 +276,11 @@ class Mapas extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  IconButton(icon: Icon(Icons.add_box), onPressed: null)
+                  IconButton(
+                      icon: Icon(Icons.add_box),
+                      onPressed: (){
+                       
+                      })
                 ],
               ),
             ],
@@ -236,5 +288,23 @@ class Mapas extends StatelessWidget {
         );
       },
     );
+  }
+  void _shareImageAndText(String image,String titulo,String bairro) async {
+    try {
+      final ByteData bytes = await rootBundle.load(image);
+      print("aquiiii "+image);
+      var nomeMapa=image.split("/");
+
+      await WcFlutterShare.share(
+          sharePopupTitle: 'Mapa',
+          subject: 'This is subject',
+          text: 'Prezado irmão, segue os dados do território a ser trabalhado: Número do território: '+titulo+" | Bairro: "+bairro,
+          fileName: nomeMapa[1],
+          mimeType: 'image/png',
+          bytesOfFile: bytes.buffer.asUint8List());
+          print("uauu");
+    } catch (e) {
+      print('error: $e');
+    }
   }
 }
