@@ -36,10 +36,12 @@ class _LoginState extends State<Login> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.blue,
+        
         centerTitle: true,
         title: Text(
           "Mapas da Congregação Central",
           textAlign: TextAlign.center,
+        
         ),
       ),
       backgroundColor: Colors.white,
@@ -54,10 +56,7 @@ class _LoginState extends State<Login> {
                   width: double.infinity,
                   height: 300,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.indigo.shade300,
-                      Colors.indigo.shade500
-                    ]),
+                    color: Colors.blue
                   ),
                 ),
               ),
@@ -89,10 +88,7 @@ class _LoginState extends State<Login> {
                   width: double.infinity,
                   height: 300,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      Colors.indigo.shade300,
-                      Colors.indigo.shade500
-                    ]),
+                    color: Colors.black12,
                   ),
                 ),
               ),
@@ -176,8 +172,7 @@ class _LoginState extends State<Login> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(100)),
-                  gradient: LinearGradient(
-                      colors: [Colors.indigo.shade300, Colors.indigo.shade500]),
+                  color: Colors.blue
                 ),
                 child: FlatButton(
                   child: Text(
@@ -208,7 +203,7 @@ class _LoginState extends State<Login> {
                               duration: Toast.LENGTH_LONG,
                               gravity: Toast.BOTTOM);
                           pr.show();
-                          Future.delayed(Duration(seconds: 3)).then((value) {
+                          Future.delayed(Duration(seconds: 5)).then((value) {
                             pr.hide().whenComplete(() {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (BuildContext context) => Home()));

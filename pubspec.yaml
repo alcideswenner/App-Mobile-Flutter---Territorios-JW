@@ -34,6 +34,8 @@ dependencies:
   shared_preferences: ^0.5.6+3
   progress_dialog: ^1.2.0
   wc_flutter_share: ^0.2.0
+  url_launcher: ^5.4.2
+  download_manager: ^1.0.1+2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -52,8 +54,8 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - icon/iconee.png
     - mapas/
+    - icon/
      
 
   # An image asset can refer to one or more resolution-specific "variants", see

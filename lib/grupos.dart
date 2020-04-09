@@ -1,36 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:territorios/grupos.dart';
 import 'package:wc_flutter_share/wc_flutter_share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Maps extends StatefulWidget {
+class Grupos extends StatefulWidget {
   @override
-  _MapsState createState() => _MapsState();
+  _GruposState createState() => _GruposState();
 }
 
-var diaSemanas = [
-  "Domingo",
-  "Segunda-Feira",
-  "Terça-Feira",
-  "Quarta-Feira",
-  "Quinta-Feira",
-  "Sexta-Feira",
-  "Sábado"
-];
-String valor = geradiaSemana();
+
+String valor = "Grupo Central";
 String selecao;
 String bairro;
-String geradiaSemana() {
-  DateTime data = DateTime.now();
-  int diaSemana = data.weekday;
-  return diaSemanas[diaSemana];
-}
  
-class _MapsState extends State<Maps> {
+class _GruposState extends State<Grupos> {
+  
   @override
   Widget build(BuildContext context) {
-    print(geradiaSemana());
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -51,20 +37,22 @@ class _MapsState extends State<Maps> {
               setState(() {
                 valor = newValue;
                 selecao = newValue;
-                if (selecao == "Domingo") {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => Grupos()));
+                if (selecao == "Grupo Central") {
+                 bairro="Centro";
+                }else if(selecao == "Grupo 14 de Abril"){
+                 bairro="Centro";
+                }else if(selecao == "Grupo C"){
+                 bairro="Mutirão";
+                }else if(selecao == "Grupo D"){
+                 bairro="Subestação";
                 }
               });
             },
             items: <String>[
-              'Domingo',
-              'Segunda-Feira',
-              'Terça-Feira',
-              'Quarta-Feira',
-              'Quinta-Feira',
-              'Sexta-Feira',
-              'Sábado'
+              'Grupo Central',
+              'Grupo 14 de Abril',
+              'Grupo C',
+              'Grupo D',
             ].map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem<String>(
                 value: value,
@@ -359,6 +347,7 @@ class _MapasState extends State<Mapas> {
       itemCount: data.length,
       itemBuilder: (BuildContext context, int index) {
         Item item = data[index];
+        
         return selecao == null || selecao == ""
             ? new Card(
                 elevation: 3,
@@ -436,7 +425,7 @@ class _MapasState extends State<Mapas> {
                     ),
                   ],
                 ))
-            : item.semana.contains(selecao)
+            : item.bairro.contains(bairro)
                 ? new Card(
                     elevation: 3,
                     child: Row(

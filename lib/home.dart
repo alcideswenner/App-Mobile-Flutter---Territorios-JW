@@ -38,11 +38,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     Stack(
       children: <Widget>[
         Container(
-          height: 200.0,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [Colors.indigo.shade300, Colors.indigo.shade500]),
+          decoration: new BoxDecoration(
+            image: new DecorationImage(
+              image: new AssetImage("icon/09.jpg"),
+              fit: BoxFit.cover,
+            ),
           ),
+          child: null /* add child content content here */,
         ),
         ListView.builder(
           itemCount: 7,
@@ -277,8 +279,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 shape: CircleBorder(),
                 child: CircleAvatar(
                     radius: 40.0,
-                    backgroundImage: NetworkImage(
-                        "https://image.flaticon.com/icons/png/512/44/44948.png")),
+                    backgroundImage: AssetImage("icon/user.png")),
               ),
             ],
           ),
