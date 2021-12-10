@@ -3,9 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:territorios/pages/page_inicial.dart';
 //import 'package:territorios/login.dart';
 
-
 void main() {
-  
   runApp(MaterialApp(
     theme: ThemeData(
         iconTheme: IconThemeData(color: Colors.deepPurple),
@@ -15,6 +13,7 @@ void main() {
     title: "Território Central",
     localizationsDelegates: [
       GlobalMaterialLocalizations.delegate,
+      GlobalCupertinoLocalizations.delegate,
       GlobalWidgetsLocalizations.delegate,
     ],
     supportedLocales: [

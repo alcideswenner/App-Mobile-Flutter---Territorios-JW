@@ -41,7 +41,8 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
     carregaCircular();
     completaPreferencias();
     return WillPopScope(
@@ -97,9 +98,9 @@ class _LoginState extends State<Login> {
           stream: bloc.saida,
           builder: (context, snap) {
             return TextFormField(
+                autovalidateMode: AutovalidateMode.always,
                 onChanged: bloc.verificaUsuario,
                 maxLength: 11,
-                autovalidate: true,
                 validator: (val) {
                   if (val.trim().length >= 11 ||
                       val.trim().length <= 11 ||
@@ -139,11 +140,10 @@ class _LoginState extends State<Login> {
         elevation: 2.0,
         borderRadius: BorderRadius.all(Radius.circular(30)),
         child: TextFormField(
-          autovalidate: true,
+          autovalidateMode: AutovalidateMode.always,
           validator: (val) {
             if (val.trim().length > 8 ||
-                val.trim().length < 8 ||
-                val.trim().isEmpty) {
+                val.trim().length < 8 && val.isNotEmpty) {
               return "Digite corretamente a sua senha";
             } else {
               return null;
@@ -179,8 +179,9 @@ class _LoginState extends State<Login> {
         padding: EdgeInsets.symmetric(horizontal: 32),
         child: Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(100)),
-              color: Theme.of(context).primaryColor,),
+            borderRadius: BorderRadius.all(Radius.circular(100)),
+            color: Theme.of(context).primaryColor,
+          ),
           child: FlatButton(
             child: Text(
               "Login",
@@ -217,7 +218,9 @@ class _LoginState extends State<Login> {
             child: Column(),
             width: double.infinity,
             height: 300,
-            decoration: BoxDecoration(color: Theme.of(context).primaryColor,),
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor,
+            ),
           ),
         ),
         ClipPath(

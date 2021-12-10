@@ -99,8 +99,11 @@ class _HistoricoState extends State<Historico> {
                                     snap.data.documents[index].data["tipo"]),
                                 subtitle: Text(snap
                                     .data.documents[index].data["historico"]),
-                                leading: Text(
-                                    snap.data.documents[index].data["nome"]),
+                                leading: Text(snap.data.documents[index]
+                                            .data["nome"] !=
+                                        null
+                                    ? snap.data.documents[index].data["nome"]
+                                    : ""),
                                 trailing: Text(timeago
                                     .format(timestamp.toDate(), locale: "br")),
                               );

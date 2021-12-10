@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "territorios-a4300",
+  "private_key_id": "1eff847de97e20ce845caa64baacb862fd5036fd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCc18OYsRFZXnEK\nF0skvdP2u08UkeHx00gnJWIp+c2P3+FHOfpCxLs8YXSREwScjK3hmnS3oQ59HEVq\ncePg8W9RBOh9fWibXunoBl6UM4mdATuKI7u7awuHLvrHXk7AC7ZXUmocpRRTZWHn\nQRKOULNf1Z1KVlTA9buvP6s3l+e1TftFE272VvqBHuZNvxbHZM06IZbumAjLMZGt\nq1Cv8OBpjvZsUAYCiglsGTnTIeg2DOYrKG69IZPpfphNniGR7cgsbtd7kK+QDe77\n3wLHhbDBL5WCi2LHHU5SyBtbcBLE+bHRNhFoCRo0VGZUiU60plk6BTZsxBBK4KWM\n3WAcObiHAgMBAAECggEAP4pf+P+fNjP/GqX2MOPguAAJWR2CylwcypMoEjZcE5IR\nK7Bu1VbrPdqDhXSNdTi/BvtylqQegQwPiUCrn8lgHhQddh104CETJQdTkLnSYfOK\nYfv5BcQnrvQW7+cig0YbcIP4bjNoqSKVB8GCmXpTORuK9f9EpcnH6Ackv8iAPCBB\nKJ4UJtmRhkx4tJ8irqQJsA5EzEy9dCWMGlre6c0gwsNFwO4N9R1nH/rzgY5eKWiw\nzuthcHv9VGkuiruGNaddQZn6g0WdE9VyyhLeLEEo02ph7xfIMBRXCsp2hWG+MjGX\nQEd9FwGdag27ZgujSP4mbyw4YIAZ0/o6jJqQfpBpGQKBgQDZf97ixyAO5NXvwm08\nk6qn0R0/c8KEntSpUKK3CayiyKh4MuPhPXxY1tk2kf4CW44P5W6WLo3Lzcityp9q\nhfGMP+A+j5/m+PnydRxvfOh9YXTV1ltWF0AsqiFhimKYc50ryo/gg74ql/dOLv0V\n7AaCO+TlskLKftottAizYF/wzwKBgQC4mzKVNcTbTqDcCZaO7xVmUviPg388uiYI\nWgkB5HAT11RDJVNV+d+rxxCRwiRM/IwwZ52jvUYwf5PZ8Buqazzon07PQH10/pbs\nc/YiMwCeXGLzOUvb9SalUHN00KtTh1WndfurKXyQayKO5RhthPUZlQHzw1ZWpUdA\npLDG0G16yQKBgQC3FZOKdDJBN1H7LEAF0QvDjhy/r/Ma7hR3nkAKMeOXd6+Q1s3K\naZaFtf1MmWInm+ge63PGidOkrknyOXEuGyg0dgSOxRnGNOk5tmlEU/HksSfHZVSn\nSJUlw+SrlfDfAdtY5H9ub5ehhSCROK6kSHVGJaLN09uzV0rTVAxK6qJ4MwKBgQCo\n1P9o6Pj13S5OrtIsPMokf+NlVUzrnA8mejlcqrA55SfiFOPncJQ4ROGJfLW4Vwxb\nRJguZO8pcbQlkGus61CUKwZnk0Jp2mDrNY64bk61hibU7OTM8KL8c9xzzFe0F8Sl\nV8joHBQY/HJpn2o812lVkSps5owyyAunOjeWTI6jyQKBgQDBGHyVMsNOYEr9F7jW\n7YhxloTQ762LPf72bS6A6s+cRJgYyUgxtfcZx+ukSj2+QWlcMOfWxBfDD/3s4SDm\nTKXjoCVaBH1m4GcIfa4hREEOKQ9d/ousFNTnNlEptFsBnWRskm4AGI7ylXCV+MJx\nlI1K4oLMlK9mpKnqnq4cEQU4SA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "playstore@territorios-a4300.iam.gserviceaccount.com",
+  "client_id": "111298032872164893979",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/playstore%40territorios-a4300.iam.gserviceaccount.com"
+}

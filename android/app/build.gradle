@@ -46,9 +46,9 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.alcideswenner.territorios"
         minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 21
-        versionName '21.0.0'
+        targetSdkVersion 30
+        versionCode 35
+        versionName '35.0.0'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }

@@ -40,7 +40,7 @@ class _PageInicialState extends State<PageInicial> {
               ),
               Text("Alcides Wenner ",
                   style: TextStyle(
-                    color: Colors.red.shade900,
+                    color: Theme.of(context).primaryColor,
                     fontWeight: FontWeight.bold,
                     fontSize: 18.0,
                   ))
@@ -52,7 +52,7 @@ class _PageInicialState extends State<PageInicial> {
   }
 
   startNextPage() async {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     var duracao = Duration(seconds: 4);
     return new Timer(duracao, tela);
   }
@@ -81,8 +81,8 @@ class _PageInicialState extends State<PageInicial> {
             ),
             Center(
               child: Container(
-                width: 200,
-                height: 200,
+                width: 240,
+                height: 240,
                 child: FlareActor("icon/loading.flr",
                     animation: "loading",
                     fit: BoxFit.contain,

@@ -24,6 +24,7 @@ class LoginBloc extends BlocBase {
     final QuerySnapshot res =
         await colecao.where("CPF", isEqualTo: usuario).getDocuments();
     final List<DocumentSnapshot> docs = res.documents;
+    print(docs);
     if (docs.length == 0) {
       return false;
     } else {
@@ -31,9 +32,9 @@ class LoginBloc extends BlocBase {
     }
   }
 
-
   @override
   void dispose() {
     _streamController.close();
+    super.dispose();
   }
 }

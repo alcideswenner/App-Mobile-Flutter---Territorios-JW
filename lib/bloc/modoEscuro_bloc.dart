@@ -7,11 +7,6 @@ class ModoEscuroBloc extends BlocBase {
   Sink get entrada => _controle.sink;
   Stream get saida => _controle.stream;
 
-  @override
-  void dispose() {
-    _controle.close();
-  }
-
   verificaModoEscuro(bool status) {
     if (status == true) {
       status = true;

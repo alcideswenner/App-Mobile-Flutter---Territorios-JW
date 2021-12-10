@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'dart:typed_data';
 import 'package:flutter/services.dart';
 import 'package:wc_flutter_share/wc_flutter_share.dart';
 
@@ -38,7 +37,6 @@ imagemAmpliada(
                       onPressed: () {
                         _compartilhaImagemTexto(image, titulo, bairro, link);
                         print("aqui" + image);
-                        
                       },
                     ),
                     const SizedBox(width: 10.0),
@@ -46,9 +44,8 @@ imagemAmpliada(
                       color: Colors.white,
                       icon: Icon(Icons.map),
                       onPressed: () async {
-                        if(link==""){
-                           
-                        }else{
+                        if (link == "") {
+                        } else {
                           abrirLink(link);
                         }
                       },
@@ -88,9 +85,7 @@ void _compartilhaImagemTexto(
         mimeType: 'image/webp',
         bytesOfFile: bytes.buffer.asUint8List());
     print("uauu");
-    
   } catch (e) {
     print('error: $e');
   }
 }
-

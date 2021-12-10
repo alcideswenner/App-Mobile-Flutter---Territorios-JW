@@ -97,7 +97,7 @@ class _InicioState extends State<Inicio> {
                     height: 20.0,
                   ),
                   Text("Olá, " + nome,
-                      style: Theme.of(context).textTheme.title),
+                      style: Theme.of(context).textTheme.headline6),
                   SizedBox(
                     height: 5.0,
                   ),
@@ -180,7 +180,7 @@ class _InicioState extends State<Inicio> {
         children: <Widget>[
           Text(
             "Meus mapas (Offline)",
-            style: Theme.of(context).textTheme.title,
+            style: Theme.of(context).textTheme.headline6,
           ),
           FlatButton(
             onPressed: () {
@@ -202,8 +202,8 @@ class _InicioState extends State<Inicio> {
     return Container(
         color: Colors.white,
         padding: EdgeInsets.only(left: 20.0, top: 20.0, bottom: 10.0),
-        child:
-            Text("Mapas Designados", style: Theme.of(context).textTheme.title));
+        child: Text("Mapas Designados",
+            style: Theme.of(context).textTheme.headline6));
   }
 
   mostraMapas(String status, int cor) {
@@ -272,7 +272,7 @@ class _InicioState extends State<Inicio> {
                                             .data["territorio"],
                                         style: Theme.of(context)
                                             .textTheme
-                                            .subhead
+                                            .subtitle1
                                             .merge(TextStyle(
                                                 color: Colors.grey.shade600))),
                                     leading: IconButton(

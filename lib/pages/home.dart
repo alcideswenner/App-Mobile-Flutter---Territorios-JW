@@ -35,14 +35,15 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
     return WillPopScope(
         child: Scaffold(
           floatingActionButton: FloatingActionButton(
             child: Icon(Icons.map),
-            onPressed: (){
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (BuildContext context) => GoogleMapa()));
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => GoogleMapa()));
             },
           ),
           appBar: appBar(),
