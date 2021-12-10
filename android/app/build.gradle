@@ -47,8 +47,8 @@ android {
         applicationId "com.alcideswenner.territorios"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 35
-        versionName '35.0.0'
+        versionCode 36
+        versionName '35.0.1'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
